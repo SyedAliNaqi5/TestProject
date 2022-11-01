@@ -1,0 +1,76 @@
+<div class="mt-5">
+  
+    <div class="card">
+      <div class="card-body p-4">
+        <form [formGroup]="form" (ngSubmit)="Add()">
+          <h1>Add </h1>
+  
+  
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="name">First Name <span class="text-danger">*</span> </label>
+                <div class="input-group mb-3">
+  
+                  <input type="text" class="form-control" formControlName="firstName"  required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="profile">Last Name <span class="text-danger">*</span> </label>
+                <div class="input-group mb-3">
+  
+                  <input type="text" class="form-control" formControlName="lastName" required>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="name">Father Name <span class="text-danger">*</span> </label>
+                <div class="input-group mb-3">
+  
+                  <input type="text" class="form-control" formControlName="fatherName" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="profile">Date of Birth <span class="text-danger">*</span> </label>
+                <div class="input-group mb-3">
+  
+                  <input type="date" class="form-control" formControlName="dateOfBirth" required>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="name">City <span class="text-danger">*</span> </label>
+                <div class="input-group mb-3">
+  
+                  <input type="text" class="form-control" formControlName="city"  required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="profile">Start Date <span class="text-danger">*</span> </label>
+                <div class="input-group mb-3">
+  
+                  <input type="date" class="form-control" formControlName="startDate" required>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+         
+          <br>
+          <div class="row">
+            <button type="submit" [disabled]="!form.valid" class="col-md-2 ml-3 btn btn-block btn-success">Save</button>
+            <a routerLink="/" class="btn btn-danger col-md-2 ml-2"> Cancel</a>
+          </div>
+        </form>
+  
+      </div>
+  
+    </div>
+  </div>

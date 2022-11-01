@@ -1,0 +1,48 @@
+<div class="mt-5">
+  
+  
+    <div *ngIf="data?.length==0">
+      <h1 class="text-center">No Data Found</h1>
+    </div>
+    <div *ngIf="data?.length>0">
+      <div class="card">
+        <div class="card-body p-4">
+          <h2> Student Information</h2>
+                
+          <div class="table-responsive">
+            <table  class="table table-striped" >
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name </th>
+                  <th>Date of Birth</th>
+                  <th>Father Name</th>
+                  <th>City</th>
+                  <th>Operation</th>
+                </tr>
+              </thead>
+              <tbody>
+  
+                <tr *ngFor="let item of data">
+                  <td>{{item.firstName}}</td>
+                  <td>{{item.lastName}}</td>
+                  <td>{{item.dateOfBirth}}</td>
+                  <td>{{item.fatherName}}</td>
+                  <td>{{item.city}}</td>
+                  <td><i type="button" class="icons fa fa-trash mr-2" ngbTooltip="Delete"
+                      (click)="delete(item.id)">Delete</i>|
+                    <i type="button" class="iconedit fa fa-edit" ngbTooltip="Edit"
+                      routerLink="/test/update/{{item.id}}">edit</i>
+                  </td>
+                </tr>
+  
+              </tbody>
+            </table>
+          </div>
+          
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  
